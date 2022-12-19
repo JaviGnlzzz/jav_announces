@@ -31,7 +31,7 @@ body{
     background-color: rgb(39, 39, 39);
     box-shadow: 0 0 6px rgb(39, 39, 39);
     border-radius: .4vw;
-    opacity: 1;
+    opacity: 0;
 }
 
 .titulo{
