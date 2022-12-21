@@ -1,0 +1,99 @@
+@font-face {
+    font-family: font1;
+    src: url(fonts/1.ttf);
+}
+
+body{
+    overflow: hidden;
+}
+
+*{
+    font-family: font1;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+.anuncios{
+    display: flex;
+    justify-content: center;
+}
+
+.container-anuncio{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 16vw;
+    padding: .25vw;
+    height: max-content;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 0 0 6px rgb(39, 39, 39);
+    border-radius: .4vw;
+    opacity: 0;
+}
+
+.titulo{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.301);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.301);
+    padding: .25vw;
+    border-radius: .3vw;
+    text-align: center;
+    letter-spacing: .1vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: .5vw;
+    margin-bottom: .5vw;
+    font-size: .8vw;
+}
+
+i{
+    margin-right: .4vw;
+}
+
+.texto-anuncio{
+    width: 80%;
+    padding: .25vw;
+}
+
+.mensaje{
+    font-size: .7vw;
+    color: rgb(209, 209, 209);
+    margin-bottom: .4vw;
+}
+
+@keyframes anim-in {
+    0%{
+        opacity: 0;
+        top: -8vw;
+        transform: scale(0.25);
+    }
+    100%{
+        opacity: 1;
+        top: 1vw;
+        transform: scale(1);
+    }
+}
+
+@keyframes anim-out {
+    0%{
+        opacity: 1;
+        top: 1vw;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        top: -15vw;
+        transform: scale(0.25);
+    }
+}
+
+.anuncio-in{
+    animation: anim-in .45s cubic-bezier(0.26, 0.53, 0.74, 1.08) forwards;
+}
+
+.anuncio-out{
+    animation: anim-out .45s forwards;
+}
